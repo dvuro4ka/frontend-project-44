@@ -1,0 +1,25 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Brain games",
+  "main": "bin/brain-games.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvuro4ka/frontend-project-44.git"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvuro4ka/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/dvuro4ka/frontend-project-44#readme"
+  
+}
+
