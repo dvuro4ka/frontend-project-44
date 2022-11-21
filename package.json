@@ -14,12 +14,16 @@
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
+  "src":{
+    
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dvuro4ka/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/dvuro4ka/frontend-project-44#readme"
-  
+  "homepage": "https://github.com/dvuro4ka/frontend-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
-
