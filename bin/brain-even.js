@@ -1,6 +1,6 @@
-#!/usr/bin/env node.
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import * as welcome from '../src/cli.js';
+import { welcome } from '../src/cli.js';
 
 export const even = () => {
   const name = welcome();
