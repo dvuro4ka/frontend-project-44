@@ -14,8 +14,8 @@
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
-  "src":{
-    
+  "src": {
+    "welcome": "src/cli.js"
   },
   "author": "",
   "license": "ISC",
@@ -25,5 +25,10 @@
   "homepage": "https://github.com/dvuro4ka/frontend-project-44#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
