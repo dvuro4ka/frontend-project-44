@@ -9,3 +9,5 @@ export const even = () => {
 }
 
 game(gameDesc,even);
+
+export default even;
