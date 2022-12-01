@@ -6,7 +6,7 @@ const ArithProgression = (step, length, RandomNumber) => {
   const result = [];
 
   for (let i = 0, count = step; i < length; i += 1, count += step) {
-    (i === RandomNumber) ? result.push('...') : result.push(`${count}`);
+    (i === RandomNumber) ? result.push('..') : result.push(`${count}`);
   }
   const stringResult = result.join(' ');
 
