@@ -1,4 +1,4 @@
-import game from '../index.js';
+import { game } from '../index.js';
 
 const gameDesc = 'What number is missing in the progression?';
 
@@ -6,7 +6,7 @@ const ArithProgression = (step, length, RandomNumber) => {
   const result = [];
 
   for (let i = 0, count = step; i < length; i += 1, count += step) {
-    (i === RandomNumber) ? result.push('..') : result.push(`${count}`);
+    if (i === RandomNumber) { result.push('..'); } else { result.push(`${count}`); }
   }
   const stringResult = result.join(' ');
 

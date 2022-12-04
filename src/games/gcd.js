@@ -1,7 +1,9 @@
-import game from '../index.js';
+import { game } from '../index.js';
 
 const gameDesc = 'Find the greatest common divisor of given numbers.';
-const result = (firstNumber, secondNumber) => {
+const result = (first, second) => {
+  let firstNumber = first;
+  let secondNumber = second;
   while (firstNumber && secondNumber) {
     if (firstNumber > secondNumber) firstNumber -= secondNumber;
     else secondNumber -= firstNumber;
