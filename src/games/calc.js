@@ -1,6 +1,6 @@
 import { game } from '../index.js';
 
-const gameDesc = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 const dataOperator = ['+', '-', '*'];
 const switchOperator = (firstNumber, operator, secondNumber) => {
   let resultOperation = 0;
@@ -22,6 +22,6 @@ export const calc = () => {
   return [question, rightAnswer];
 };
 
-game(gameDesc, calc);
+game(gameDescription, calc);
 
 export default calc;

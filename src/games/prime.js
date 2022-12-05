@@ -1,6 +1,6 @@
 import { game } from '../index.js';
 
-const gameDesc = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const primeAlgo = (num) => {
   let isPrime = 'no';
@@ -15,6 +15,6 @@ export const prime = () => {
   return [question, rightAnswer];
 };
 
-game(gameDesc, prime);
+game(gameDescription, prime);
 
 export default prime;

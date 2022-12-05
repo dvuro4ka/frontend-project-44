@@ -1,6 +1,6 @@
 import { game } from '../index.js';
 
-const gameDesc = 'Find the greatest common divisor of given numbers.';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 const result = (first, second) => {
   let firstNumber = first;
   let secondNumber = second;
@@ -18,6 +18,6 @@ export const gcd = () => {
   return [question, rightAnswer];
 };
 
-game(gameDesc, gcd);
+game(gameDescription, gcd);
 
 export default gcd;

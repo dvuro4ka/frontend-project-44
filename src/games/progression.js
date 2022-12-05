@@ -1,6 +1,6 @@
 import { game } from '../index.js';
 
-const gameDesc = 'What number is missing in the progression?';
+const gameDescription = 'What number is missing in the progression?';
 
 const ArithProgression = (step, length, RandomNumber) => {
   const result = [];
@@ -22,6 +22,6 @@ export const progression = () => {
   return [question, rightAnswer];
 };
 
-game(gameDesc, progression);
+game(gameDescription, progression);
 
 export default progression;
