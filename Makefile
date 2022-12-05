@@ -16,8 +16,11 @@ brain-gcd:
 brain-progression:
 	node bin/brain-progression.js
 	
-init:
+lint:
 	npx eslint .
+
+lint-fix:
+	npx eslint . --fix
 
 publish:
 	npm publish --dry-run
