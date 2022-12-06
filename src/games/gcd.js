@@ -1,7 +1,8 @@
 import { gameEngine } from '../index.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
-const Euclidean_algorithm = (first, second) => {
+
+const EuclideanAlgorithm = (first, second) => {
   let firstNumber = first;
   let secondNumber = second;
   while (firstNumber && secondNumber) {
@@ -14,7 +15,7 @@ export const gcd = () => {
   const firstNumber = Math.floor(Math.random() * 20 + 1);
   const secondNumber = Math.floor(Math.random() * 20 + 1);
   const question = `${firstNumber} ${secondNumber}`;
-  const rightAnswer = String(Euclidean_algorithm(firstNumber, secondNumber));
+  const rightAnswer = String(EuclideanAlgorithm(firstNumber, secondNumber));
   return [question, rightAnswer];
 };
 
