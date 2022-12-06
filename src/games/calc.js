@@ -13,7 +13,7 @@ const switchOperator = (firstNumber, operator, secondNumber) => {
   return resultOperation;
 };
 
-export const calc = () => {
+export const calculator = () => {
   const firstNumber = Math.floor(Math.random() * 20);
   const secondNumber = Math.floor(Math.random() * 20);
   const operator = dataOperator[Math.floor(Math.random() * dataOperator.length)];
@@ -22,6 +22,6 @@ export const calc = () => {
   return [question, rightAnswer];
 };
 
-gameEngine(gameDescription, calc);
+gameEngine(gameDescription, calculator);
 
-export default calc;
+export default calculator;
