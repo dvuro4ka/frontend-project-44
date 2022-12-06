@@ -1,4 +1,4 @@
-import { game } from '../index.js';
+import { gameEngine } from '../index.js';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -15,6 +15,6 @@ export const prime = () => {
   return [question, rightAnswer];
 };
 
-game(gameDescription, prime);
+gameEngine(gameDescription, prime);
 
 export default prime;

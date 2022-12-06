@@ -1,4 +1,4 @@
-import { game } from '../index.js';
+import { gameEngine } from '../index.js';
 
 const gameDescription = 'What is the result of the expression?';
 const dataOperator = ['+', '-', '*'];
@@ -22,6 +22,6 @@ export const calc = () => {
   return [question, rightAnswer];
 };
 
-game(gameDescription, calc);
+gameEngine(gameDescription, calc);
 
 export default calc;

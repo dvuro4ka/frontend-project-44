@@ -1,10 +1,10 @@
-import { game } from '../index.js';
+import { gameEngine } from '../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
 const ArithProgression = (step, length, RandomNumber) => {
   const result = [];
-
+   
   for (let i = 0, count = step; i < length; i += 1, count += step) {
     if (i === RandomNumber) { result.push('..'); } else { result.push(`${count}`); }
   }
@@ -22,6 +22,6 @@ export const progression = () => {
   return [question, rightAnswer];
 };
 
-game(gameDescription, progression);
+gameEngine(gameDescription, progression);
 
 export default progression;

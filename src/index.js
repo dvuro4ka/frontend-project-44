@@ -1,9 +1,7 @@
 import readlineSync from 'readline-sync';
 import { welcome } from './cli.js';
 
-export const game = (gameDescription, gameData) => {
-  const name = welcome();
-  console.log(gameDescription);
+const prepareRightAnswer = (name, gameData) => {
   let count = 0;
   while (count < 3) {
     const [question, rightAnswer] = gameData();
@@ -18,4 +16,10 @@ export const game = (gameDescription, gameData) => {
   }
   return console.log(`Congratulations, ${name}!`);
 };
-export default game;
+
+export const gameEngine = (gameDescription, gameData) => {
+  const name = welcome();
+  console.log(gameDescription);
+  prepareRightAnswer(name, gameData);
+};
+export default gameEngine;
