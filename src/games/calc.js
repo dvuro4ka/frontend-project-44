@@ -1,3 +1,4 @@
+import { generateMaxRandomNumber } from '../helpers.js';
 import { gameEngine } from '../index.js';
 
 const gameDescription = 'What is the result of the expression?';
@@ -13,15 +14,15 @@ const switchOperator = (firstNumber, operator, secondNumber) => {
   return resultOperation;
 };
 
-export const calculator = () => {
-  const firstNumber = Math.floor(Math.random() * 20);
-  const secondNumber = Math.floor(Math.random() * 20);
+export const startGameCalculator = () => {
+  const firstNumber = generateMaxRandomNumber(20);
+  const secondNumber = generateMaxRandomNumber(20);
   const operator = dataOperator[Math.floor(Math.random() * dataOperator.length)];
   const rightAnswer = String(switchOperator(firstNumber, operator, secondNumber));
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   return [question, rightAnswer];
 };
 
-gameEngine(gameDescription, calculator);
+gameEngine(gameDescription, startGameCalculator);
 
-export default calculator;
+export default startGameCalculator;

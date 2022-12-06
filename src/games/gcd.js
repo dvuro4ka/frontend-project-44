@@ -1,3 +1,4 @@
+import { generateMaxRandomNumber } from '../helpers.js';
 import { gameEngine } from '../index.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
@@ -11,14 +12,14 @@ const EuclideanAlgorithm = (first, second) => {
   }
   return firstNumber + secondNumber;
 };
-export const gcd = () => {
-  const firstNumber = Math.floor(Math.random() * 20 + 1);
-  const secondNumber = Math.floor(Math.random() * 20 + 1);
+export const startGameGCD = () => {
+  const firstNumber = generateMaxRandomNumber(25);
+  const secondNumber = generateMaxRandomNumber(25);
   const question = `${firstNumber} ${secondNumber}`;
   const rightAnswer = String(EuclideanAlgorithm(firstNumber, secondNumber));
   return [question, rightAnswer];
 };
 
-gameEngine(gameDescription, gcd);
+gameEngine(gameDescription, startGameGCD);
 
-export default gcd;
+export default startGameGCD;

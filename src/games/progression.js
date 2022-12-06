@@ -1,3 +1,4 @@
+import { generateArithmProgression, generateMaxRandomNumber } from '../helpers.js';
 import { gameEngine } from '../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
@@ -13,16 +14,16 @@ const ArithProgression = (step, length, RandomNumber) => {
   return stringResult;
 };
 
-export const progression = () => {
-  const step = Math.floor(Math.random() * 20 + 1);
-  let length = Math.floor(Math.random() * (20 - 5) + 5);
-  let RandomNumber = Math.floor(Math.random() * (10 - 1) + 1);
+export const startGameProgression = () => {
+  const step = generateMaxRandomNumber(20);
+  let length = generateArithmProgression(5, 20);
+  let RandomNumber = generateArithmProgression(1, 10);
   if (RandomNumber > length) [length, RandomNumber] = [RandomNumber, length];
   const question = ArithProgression(step, length, RandomNumber);
   const rightAnswer = String(RandomNumber * step + step);
   return [question, rightAnswer];
 };
 
-gameEngine(gameDescription, progression);
+gameEngine(gameDescription, startGameProgression);
 
-export default progression;
+export default startGameProgression;
