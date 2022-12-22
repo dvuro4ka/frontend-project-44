@@ -3,6 +3,15 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/4ef602e91320372b03a5/maintainability)](https://codeclimate.com/github/dvuro4ka/frontend-project-44/maintainability)
 
+# Brain-games
+Brain-games is a terminal game consisting of 5 mini-games:
+
+- Brain-calculator - calculate a random mathematical expression of two numbers
+- Brain-even - check random number for parity
+- Brain-GCD - find the greatest common divisor of two numbers
+- Brain-prime - find out if a number is prime
+- Brain-progression - find the missing element in the progression
+
 ## Install
 Make sure you have installed Node.js version 13 or higher.
 ```

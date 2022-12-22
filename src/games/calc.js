@@ -1,28 +1,26 @@
-import { generateMaxRandomNumber } from '../helpers.js';
-import { gameEngine } from '../index.js';
+import { getRandomNumFromRange } from '../helpers.js';
+import { startGame } from '../index.js';
 
 const gameDescription = 'What is the result of the expression?';
 const dataOperator = ['+', '-', '*'];
-const switchOperator = (firstNumber, operator, secondNumber) => {
-  let resultOperation = 0;
+const getCalculate = (firstNumber, operator, secondNumber) => {
   switch (operator) {
-    case '+': resultOperation = firstNumber + secondNumber; break;
-    case '-': resultOperation = firstNumber - secondNumber; break;
-    case '*': resultOperation = firstNumber * secondNumber; break;
-    default: resultOperation = 0; break;
+    case '+': return firstNumber + secondNumber;
+    case '-': return firstNumber - secondNumber;
+    case '*': return firstNumber * secondNumber;
+    default: throw new Error(`Unknown operator: '${operator}'!`);
   }
-  return resultOperation;
 };
 
 export const startGameCalculator = () => {
-  const firstNumber = generateMaxRandomNumber(20);
-  const secondNumber = generateMaxRandomNumber(20);
-  const operator = dataOperator[Math.floor(Math.random() * dataOperator.length)];
-  const rightAnswer = String(switchOperator(firstNumber, operator, secondNumber));
+  const firstNumber = getRandomNumFromRange(1, 20);
+  const secondNumber = getRandomNumFromRange(1, 20);
+  const operator = dataOperator[getRandomNumFromRange(0, 2)];
+  const rightAnswer = String(getCalculate(firstNumber, operator, secondNumber));
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   return [question, rightAnswer];
 };
 
-gameEngine(gameDescription, startGameCalculator);
+startGame(gameDescription, startGameCalculator);
 
 export default startGameCalculator;

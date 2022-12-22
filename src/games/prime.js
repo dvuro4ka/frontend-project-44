@@ -1,21 +1,21 @@
-import { generateMaxRandomNumber } from '../helpers.js';
-import { gameEngine } from '../index.js';
+import { getRandomNumFromRange } from '../helpers.js';
+import { startGame } from '../index.js';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const primeAlgorithm = (num) => {
-  let isPrime = 'no';
-  for (let i = 2, sum = Math.sqrt(num); i <= sum; i += 1) { if (num % i === 0) return isPrime; }
-  isPrime = 'yes';
-  return isPrime;
+const isPrime = (num) => {
+  let prime = 'no';
+  for (let i = 2, sum = Math.sqrt(num); i <= sum; i += 1) { if (num % i === 0) return prime; }
+  prime = 'yes';
+  return prime;
 };
 
 export const startGamePrime = () => {
-  const question = generateMaxRandomNumber(100);
-  const rightAnswer = primeAlgorithm(question);
+  const question = getRandomNumFromRange(2, 100);
+  const rightAnswer = isPrime(question);
   return [question, rightAnswer];
 };
 
-gameEngine(gameDescription, startGamePrime);
+startGame(gameDescription, startGamePrime);
 
 export default startGamePrime;
