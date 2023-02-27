@@ -3,24 +3,33 @@ import { startGame } from '../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const getProgression = (step, length, RandomNumber) => {
+const getProgression = (step, length) => {
   const result = [];
 
   for (let i = 0, count = step; i <= length; i += 1, count += step) {
-    if (i === RandomNumber) { result.push('..'); } else { result.push(`${count}`); }
+    result.push(`${count}`);
   }
   const stringResult = result.join(' ');
 
   return stringResult;
 };
 
+const hideNumber = (progression, hiddenNumber) => {
+  const result = progression.split(' ');
+  for (let i = 0; i <= result.length; i += 1) {
+    if (i === hiddenNumber) result[i] = '..';
+  }
+  return result.join(' ');
+};
+
 export const startGameProgression = () => {
   const step = getRandomNumFromRange(1, 20);
   let length = getRandomNumFromRange(5, 20);
-  let RandomNumber = getRandomNumFromRange(1, 10);
-  if (RandomNumber > length) [length, RandomNumber] = [RandomNumber, length];
-  const question = getProgression(step, length, RandomNumber);
-  const rightAnswer = String(RandomNumber * step + step);
+  let hiddenNumber = getRandomNumFromRange(1, 10);
+  if (hiddenNumber > length) [length, hiddenNumber] = [hiddenNumber, length];
+  const progression = getProgression(step, length);
+  const question = hideNumber(progression, hiddenNumber);
+  const rightAnswer = String(hiddenNumber * step + step);
   return [question, rightAnswer];
 };
 

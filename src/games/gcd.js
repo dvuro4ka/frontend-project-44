@@ -12,9 +12,10 @@ const getGCD = (first, second) => {
   }
   return firstNumber + secondNumber;
 };
+
 export const startGameGCD = () => {
-  const firstNumber = getRandomNumFromRange(1, 25);
-  const secondNumber = getRandomNumFromRange(1, 25);
+  const firstNumber = getRandomNumFromRange();
+  const secondNumber = getRandomNumFromRange();
   const question = `${firstNumber} ${secondNumber}`;
   const rightAnswer = String(getGCD(firstNumber, secondNumber));
   return [question, rightAnswer];
